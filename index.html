@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gary's Tools</title>
+    <style>
+        :root {
+            --bg-color: #000000;
+            --card-bg: #1c1c1e;
+            --card-hover: #2c2c2e;
+            --text-main: #ffffff;
+            --text-sub: #8e8e93;
+            --accent-blue: #0a84ff;
+            --accent-orange: #ff9f0a;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding-top: 40px;
+        }
+
+        h1 {
+            font-weight: 700;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            letter-spacing: -0.5px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            width: 90%;
+            max-width: 600px;
+            padding: 10px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 18px;
+            padding: 20px;
+            text-decoration: none;
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 1 / 1;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .card:active {
+            transform: scale(0.96);
+        }
+
+        .card:hover {
+            background-color: var(--card-hover);
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .footer {
+            margin-top: 3rem;
+            color: var(--text-sub);
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Gary's Toolbox</h1>
+
+    <div class="grid-container">
+        <a href="https://titan816.github.io/work-time-calculator/" class="card">
+            <div class="icon">🕒</div>
+            <div class="card-title">下班計算機</div>
+        </a>
+
+        <a href="https://titan816.github.io/timed-lock-calculator/" class="card">
+            <div class="icon">🔐</div>
+            <div class="card-title">密碼鎖計算</div>
+        </a>
+    </div>
+
+    <div class="footer">© 2025 Gary</div>
+
+</body>
+</html>
